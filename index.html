@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+document.addEventListener("DOMContentLoaded", function() {
+    let currentInput = "";
+    let outputElement = document.getElementById("output");
+
+    document.querySelectorAll(".button.number, .button.operator, .button.dot").forEach(function(button) {
+        button.addEventListener("click", function() {
+            currentInput += this.innerText;
+            updateOutput();
+        });
+    });
+
+    document.querySelector(".equal").addEventListener("click", function() {
+        try {
+            currentInput = eval(currentInput).toString();
+            updateOutput();
+        } catch (error) {
+            currentInput = "Error";
+            updateOutput();
+        }
+    });
+
+    document.querySelector(".delete-button").addEventListener("click", function() {
+        currentInput = currentInput.slice(0, -1);
+        updateOutput();
+    });
+
+    function updateOutput() {
+        outputElement.innerText = currentInput;
+    }
+});
+</script>
+
+    <link rel="stylesheet" type="text/css" href="working_calc.css">
+</head>
+<body>
+    <div class="calculator">
+        <div class="screen">
+            <div class="output"id="output">0</div>
+            <div class="delete-button">⌫</div>
+        </div>
+        <div class="spacer"></div>
+        <div class="buttons">
+            <button class="button number">7</button>
+            <button class="button number">8</button>
+            <button class="button number">9</button>
+            <button class="button operator">/</button>
+            <button class="button number">4</button>
+            <button class="button number">5</button>
+            <button class="button number">6</button>
+            <button class="button operator">*</button>
+            <button class="button number">1</button>
+            <button class="button number">2</button>
+            <button class="button number">3</button>
+            <button class="button operator">+</button>
+            <button class="button number zero">0</button>
+            <button class="button number dot">.</button>
+            <button class="button equal">=</button>
+            <button class="button operator">-</button>
+        </div>
+    </div>
+</body>
+</html>
