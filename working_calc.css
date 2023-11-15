@@ -1,0 +1,92 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: gray; 
+    font-family: monospace; 
+}
+
+.calculator {
+    background-color: #FFC0CB;     
+    border: 3px solid #000;
+    border-radius: 15px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2); 
+    display: inline-block;
+    text-align: center;
+    padding: 20px;
+}
+
+.screen {
+    background-color: whitesmoke; 
+    border-radius: 15px;
+    border: 3px solid #000; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 11px;
+}
+
+.delete-button {
+    background-color: #FFA500;
+    color: #FFF;
+    border: black;
+    border-radius: 15px;
+    padding: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.output {
+    font-size: 24px;
+    font-weight: bold; 
+    color: #000;
+}
+
+.spacer {
+    height: 25px; 
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+
+    gap: 12px;  
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.button {
+    background-color: #87CEEB; 
+    color: white; 
+    border: 2px solid black;  
+    border-radius: 15px;
+    padding: 20px;
+    font-size: 20px;
+    font-weight: bold; 
+    cursor: pointer;
+}
+
+.operator {
+    background-color: #000; 
+    color: #FFF; 
+    border-radius: 50%;
+    border: 2px solid white;
+    padding: 20px;
+}
+
+.equal {
+    background-color: #FFA500; 
+    color: white; 
+    border-radius: 15px; 
+    padding: 20px;
+}
+
+.dot {
+    padding: 20px; 
+}
